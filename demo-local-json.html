@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSearch Demo - Local JSON</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+        .demo-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            overflow-x: auto;
+        }
+    </style>
+    
+    <!-- SiteSearch Integration -->
+    <script>
+        window.siteSearchOptions = {
+            // Appearance
+            showSearchButton: true,
+            searchButtonPosition: 'bottom-right',
+            searchButtonColor: '#6c5ce7',
+            accentColor: '#a29bfe',
+            secondaryColor: '#5758BB',
+            
+            // Data source - using local JSON file
+            dataSource: 'json',
+            dataEndpoint: 'sample-data.json'
+        };
+    </script>
+    <script src="site-search-integration.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-header">
+            <h1>SiteSearch Demo - Local JSON</h1>
+            <p class="lead">This demo shows how to use SiteSearch with a local JSON file.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>About This Demo</h2>
+            <p>This demo uses a local JSON file as the data source for SiteSearch. This is useful for:</p>
+            <ul>
+                <li>Static websites without a backend</li>
+                <li>Small to medium-sized websites with infrequently changing content</li>
+                <li>Testing and development environments</li>
+            </ul>
+            <p>Click the search button in the bottom-right corner to try it out!</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Implementation Code</h2>
+            <p>Here's the code used to implement this demo:</p>
+            <pre><code>&lt;!-- SiteSearch Integration --&gt;
+&lt;script&gt;
+    window.siteSearchOptions = {
+        // Appearance
+        showSearchButton: true,
+        searchButtonPosition: 'bottom-right',
+        searchButtonColor: '#6c5ce7',
+        accentColor: '#a29bfe',
+        secondaryColor: '#5758BB',
+        
+        // Data source - using local JSON file
+        dataSource: 'json',
+        dataEndpoint: 'sample-data.json'
+    };
+&lt;/script&gt;
+&lt;script src="site-search-integration.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        
+        <div class="demo-section">
+            <h2>JSON Data Format</h2>
+            <p>The JSON file should contain an array of objects with the following properties:</p>
+            <pre><code>[
+  {
+    "id": "1",
+    "title": "Article Title",
+    "content": "Article content goes here...",
+    "url": "/article.html",
+    "type": "article",
+    "date": "2025-03-01"
+  },
+  ...
+]</code></pre>
+            <p>You can view the complete <a href="sample-data.json" target="_blank">sample-data.json</a> file used in this demo.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Next Steps</h2>
+            <p>Check out the other demos to see different ways to use SiteSearch:</p>
+            <ul>
+                <li><a href="demo-test-data.html">Using built-in test data</a></li>
+                <li><a href="demo-api.html">Using an API</a></li>
+                <li><a href="demo-custom.html">Custom configuration</a></li>
+            </ul>
+            <p>For more information, see the <a href="https://github.com/philipperuaudel/site-search">documentation on GitHub</a>.</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

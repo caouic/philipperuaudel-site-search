@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSearch Demo - Custom Configuration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+        .demo-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            overflow-x: auto;
+        }
+        .custom-search-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #0984e3;
+            color: white;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .custom-search-button:hover {
+            background-color: #0652DD;
+        }
+    </style>
+    
+    <!-- SiteSearch Integration with Custom Configuration -->
+    <script>
+        window.siteSearchOptions = {
+            // Appearance - custom colors
+            showSearchButton: false, // Hide the default floating button
+            searchButtonSelector: '#custom-search-button', // Use a custom button instead
+            accentColor: '#0984e3',
+            secondaryColor: '#0652DD',
+            
+            // Custom text
+            searchPlaceholder: 'Search the documentation...',
+            popupTitle: 'Documentation Search',
+            noResultsText: 'No documentation found for your query',
+            loadingText: 'Searching documentation...',
+            
+            // Custom test data
+            dataSource: 'test',
+            testData: [
+                {
+                    id: "custom-1",
+                    title: "Custom Configuration Guide",
+                    content: "This guide explains how to customize SiteSearch to match your website's design and functionality requirements.",
+                    url: "#custom-config",
+                    type: "guide",
+                    date: "2025-03-15"
+                },
+                {
+                    id: "custom-2",
+                    title: "Styling Options",
+                    content: "Learn about the various styling options available in SiteSearch, including colors, fonts, and layout customization.",
+                    url: "#styling",
+                    type: "guide",
+                    date: "2025-03-16"
+                },
+                {
+                    id: "custom-3",
+                    title: "Custom Event Handlers",
+                    content: "Implement custom event handlers to extend the functionality of SiteSearch and integrate it with your website's features.",
+                    url: "#events",
+                    type: "tutorial",
+                    date: "2025-03-17"
+                },
+                {
+                    id: "custom-4",
+                    title: "Advanced Search Options",
+                    content: "Configure advanced search options such as fuzzy matching, relevance scoring, and search filters.",
+                    url: "#advanced",
+                    type: "tutorial",
+                    date: "2025-03-18"
+                },
+                {
+                    id: "custom-5",
+                    title: "Localization",
+                    content: "Translate SiteSearch interface to different languages and adapt it for international audiences.",
+                    url: "#localization",
+                    type: "guide",
+                    date: "2025-03-19"
+                }
+            ],
+            
+            // Custom callback for search
+            onSearch: function(term, results) {
+                console.log('Search performed:', term);
+                console.log('Results found:', results.length);
+            },
+            
+            // Custom callback for result click
+            onResultClick: function(result) {
+                console.log('Result clicked:', result);
+                // You can implement custom navigation or other actions here
+                window.location.href = result.url;
+            }
+        };
+    </script>
+    <script src="site-search-integration.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-header">
+            <h1>SiteSearch Demo - Custom Configuration</h1>
+            <p class="lead">This demo shows how to customize SiteSearch with advanced options.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>About This Demo</h2>
+            <p>This demo showcases various customization options available in SiteSearch:</p>
+            <ul>
+                <li>Custom button instead of the default floating button</li>
+                <li>Custom colors and text</li>
+                <li>Custom data and callbacks</li>
+            </ul>
+            <button id="custom-search-button" class="custom-search-button">Search Documentation</button>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Implementation Code</h2>
+            <p>Here's the code used to implement this demo:</p>
+            <pre><code>&lt;!-- Custom search button in HTML --&gt;
+&lt;button id="custom-search-button" class="custom-search-button"&gt;Search Documentation&lt;/button&gt;
+
+&lt;!-- SiteSearch Integration with Custom Configuration --&gt;
+&lt;script&gt;
+    window.siteSearchOptions = {
+        // Appearance - custom colors
+        showSearchButton: false, // Hide the default floating button
+        searchButtonSelector: '#custom-search-button', // Use a custom button instead
+        accentColor: '#0984e3',
+        secondaryColor: '#0652DD',
+        
+        // Custom text
+        searchPlaceholder: 'Search the documentation...',
+        popupTitle: 'Documentation Search',
+        noResultsText: 'No documentation found for your query',
+        loadingText: 'Searching documentation...',
+        
+        // Custom test data
+        dataSource: 'test',
+        testData: [
+            {
+                id: "custom-1",
+                title: "Custom Configuration Guide",
+                content: "This guide explains how to customize SiteSearch...",
+                url: "#custom-config",
+                type: "guide",
+                date: "2025-03-15"
+            },
+            // More test data...
+        ],
+        
+        // Custom callback for search
+        onSearch: function(term, results) {
+            console.log('Search performed:', term);
+            console.log('Results found:', results.length);
+        },
+        
+        // Custom callback for result click
+        onResultClick: function(result) {
+            console.log('Result clicked:', result);
+            // You can implement custom navigation or other actions here
+            window.location.href = result.url;
+        }
+    };
+&lt;/script&gt;
+&lt;script src="site-search-integration.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Available Customization Options</h2>
+            <h3>Appearance</h3>
+            <ul>
+                <li><code>showSearchButton</code>: Show/hide the default floating search button</li>
+                <li><code>searchButtonPosition</code>: Position of the search button ('bottom-right', 'bottom-left', 'top-right', 'top-left')</li>
+                <li><code>searchButtonColor</code>: Background color of the search button</li>
+                <li><code>accentColor</code>: Primary accent color for the search interface</li>
+                <li><code>secondaryColor</code>: Secondary color for hover states and highlights</li>
+                <li><code>searchButtonSelector</code>: CSS selector for a custom search button</li>
+            </ul>
+            
+            <h3>Text Customization</h3>
+            <ul>
+                <li><code>searchPlaceholder</code>: Placeholder text for the search input</li>
+                <li><code>popupTitle</code>: Title of the search popup</li>
+                <li><code>noResultsText</code>: Text shown when no results are found</li>
+                <li><code>loadingText</code>: Text shown while loading content</li>
+                <li><code>errorText</code>: Text shown when an error occurs</li>
+                <li><code>searchButtonText</code>: Text/icon for the search button</li>
+            </ul>
+            
+            <h3>Callbacks</h3>
+            <ul>
+                <li><code>onSearch</code>: Called when a search is performed</li>
+                <li><code>onResultClick</code>: Called when a search result is clicked</li>
+            </ul>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Next Steps</h2>
+            <p>Check out the other demos to see different ways to use SiteSearch:</p>
+            <ul>
+                <li><a href="demo-test-data.html">Using built-in test data</a></li>
+                <li><a href="demo-local-json.html">Using a local JSON file</a></li>
+                <li><a href="demo-api.html">Using an API</a></li>
+            </ul>
+            <p>For more information, see the <a href="https://github.com/philipperuaudel/site-search">documentation on GitHub</a>.</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

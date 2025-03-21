@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSearch Demo - API Integration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+        .demo-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .demo-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+    </style>
+    
+    <!-- SiteSearch Integration -->
+    <script>
+        window.siteSearchOptions = {
+            // Appearance
+            showSearchButton: true,
+            searchButtonPosition: 'bottom-right',
+            searchButtonColor: '#e17055',
+            accentColor: '#ff7675',
+            secondaryColor: '#d63031',
+            
+            // For demo purposes, we're using a local JSON file that simulates an API response
+            // In a real implementation, you would use an actual API endpoint
+            dataSource: 'api',
+            dataEndpoint: 'sample-api-response.json',
+            apiKey: 'demo-api-key'
+        };
+    </script>
+    <script src="site-search-integration.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-header">
+            <h1>SiteSearch Demo - API Integration</h1>
+            <p class="lead">This demo shows how to use SiteSearch with an API.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>About This Demo</h2>
+            <p>This demo shows how to connect SiteSearch to an API for dynamic content. This is useful for:</p>
+            <ul>
+                <li>Dynamic websites with frequently changing content</li>
+                <li>Large websites with extensive content</li>
+                <li>Content management systems and headless CMS setups</li>
+            </ul>
+            <div class="note">
+                <strong>Note:</strong> For demonstration purposes, this demo uses a local JSON file that simulates an API response. In a real implementation, you would use an actual API endpoint.
+            </div>
+            <p>Click the search button in the bottom-right corner to try it out!</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Implementation Code</h2>
+            <p>Here's the code used to implement this demo:</p>
+            <pre><code>&lt;!-- SiteSearch Integration --&gt;
+&lt;script&gt;
+    window.siteSearchOptions = {
+        // Appearance
+        showSearchButton: true,
+        searchButtonPosition: 'bottom-right',
+        searchButtonColor: '#e17055',
+        accentColor: '#ff7675',
+        secondaryColor: '#d63031',
+        
+        // API configuration
+        dataSource: 'api',
+        dataEndpoint: 'https://api.example.com/search-content',
+        apiKey: 'your-api-key-here'
+    };
+&lt;/script&gt;
+&lt;script src="site-search-integration.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        
+        <div class="demo-section">
+            <h2>API Response Format</h2>
+            <p>SiteSearch supports various API response formats, but the most common is:</p>
+            <pre><code>{
+  "status": "success",
+  "data": [
+    {
+      "id": "1",
+      "title": "Article Title",
+      "content": "Article content...",
+      "url": "/article.html",
+      "type": "article",
+      "date": "2025-03-01"
+    },
+    ...
+  ]
+}</code></pre>
+            <p>You can view the complete <a href="sample-api-response.json" target="_blank">sample-api-response.json</a> file used in this demo.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Using with Different API Providers</h2>
+            <p>SiteSearch is designed to work with various API providers. Here are some examples:</p>
+            
+            <h3>1. Kernex API</h3>
+            <pre><code>window.siteSearchOptions = {
+    dataSource: 'api',
+    dataEndpoint: 'https://api.kernex.io/api/v1/your-project-id/resource/your-resource/:resourceId',
+    apiKey: 'your-kernex-api-key',
+    resourceId: 'your-resource-id'
+};</code></pre>
+            
+            <h3>2. Custom REST API</h3>
+            <pre><code>window.siteSearchOptions = {
+    dataSource: 'api',
+    dataEndpoint: 'https://your-domain.com/api/search-content',
+    apiKey: 'your-api-key'
+};</code></pre>
+            
+            <h3>3. Headless CMS (e.g., Contentful, Strapi)</h3>
+            <pre><code>window.siteSearchOptions = {
+    dataSource: 'api',
+    dataEndpoint: 'https://cdn.contentful.com/spaces/your-space-id/environments/master/entries',
+    apiKey: 'your-contentful-access-token'
+};</code></pre>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Next Steps</h2>
+            <p>Check out the other demos to see different ways to use SiteSearch:</p>
+            <ul>
+                <li><a href="demo-test-data.html">Using built-in test data</a></li>
+                <li><a href="demo-local-json.html">Using a local JSON file</a></li>
+                <li><a href="demo-custom.html">Custom configuration</a></li>
+            </ul>
+            <p>For more information, see the <a href="https://github.com/philipperuaudel/site-search">documentation on GitHub</a>.</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

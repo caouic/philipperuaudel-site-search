@@ -1,0 +1,58 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "api-1",
+      "title": "What is SiteSearch?",
+      "content": "SiteSearch is a lightweight, customizable search solution for websites. It allows you to add powerful search functionality to any website with minimal setup.",
+      "url": "/about.html",
+      "type": "faq",
+      "date": "2025-03-01",
+      "tags": ["introduction", "overview"],
+      "author": "Philippe Ruaudel"
+    },
+    {
+      "id": "api-2",
+      "title": "How to Install SiteSearch",
+      "content": "Installing SiteSearch is simple. Just include the script in your HTML and configure the options according to your needs. No server-side setup required!",
+      "url": "/installation.html",
+      "type": "guide",
+      "date": "2025-03-05",
+      "tags": ["installation", "setup"],
+      "author": "Philippe Ruaudel"
+    },
+    {
+      "id": "api-3",
+      "title": "Customizing Search Results",
+      "content": "Learn how to customize the appearance and behavior of search results in SiteSearch. This includes styling, sorting, and filtering options.",
+      "url": "/customization.html",
+      "type": "tutorial",
+      "date": "2025-03-10",
+      "tags": ["customization", "styling"],
+      "author": "Philippe Ruaudel"
+    },
+    {
+      "id": "api-4",
+      "title": "Using SiteSearch with React",
+      "content": "This guide shows you how to integrate SiteSearch with React applications. Learn about component integration and state management.",
+      "url": "/react-integration.html",
+      "type": "tutorial",
+      "date": "2025-03-15",
+      "tags": ["react", "integration"],
+      "author": "Philippe Ruaudel"
+    },
+    {
+      "id": "api-5",
+      "title": "SiteSearch Configuration Options",
+      "content": "A comprehensive reference of all configuration options available in SiteSearch. Learn how to fine-tune your search experience.",
+      "url": "/configuration.html",
+      "type": "documentation",
+      "date": "2025-03-20",
+      "tags": ["configuration", "reference"],
+      "author": "Philippe Ruaudel"
+    }
+  ],
+  "total": 5,
+  "page": 1,
+  "limit": 10
+}

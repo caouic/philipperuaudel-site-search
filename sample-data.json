@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "title": "Getting Started with SiteSearch",
+    "content": "Learn how to quickly integrate SiteSearch into your website. This guide covers the basic setup and configuration options to get you up and running in minutes.",
+    "url": "/getting-started.html",
+    "type": "documentation",
+    "date": "2025-03-01"
+  },
+  {
+    "id": "2",
+    "title": "Advanced Configuration Options",
+    "content": "Explore the advanced configuration options available in SiteSearch. Customize the appearance, behavior, and search algorithms to match your specific requirements.",
+    "url": "/advanced-configuration.html",
+    "type": "documentation",
+    "date": "2025-03-05"
+  },
+  {
+    "id": "3",
+    "title": "Integrating with APIs",
+    "content": "Learn how to connect SiteSearch with various APIs to fetch dynamic content. This guide covers authentication, data formatting, and best practices for API integration.",
+    "url": "/api-integration.html",
+    "type": "tutorial",
+    "date": "2025-03-10"
+  },
+  {
+    "id": "4",
+    "title": "Customizing the Search UI",
+    "content": "Discover how to customize the SiteSearch user interface to match your website's design. This guide covers CSS variables, theme options, and advanced styling techniques.",
+    "url": "/ui-customization.html",
+    "type": "tutorial",
+    "date": "2025-03-15"
+  },
+  {
+    "id": "5",
+    "title": "Performance Optimization",
+    "content": "Tips and tricks for optimizing SiteSearch performance on your website. Learn about caching strategies, lazy loading, and other techniques to ensure fast search results.",
+    "url": "/performance.html",
+    "type": "best-practices",
+    "date": "2025-03-20"
+  },
+  {
+    "id": "6",
+    "title": "Implementing Search Analytics",
+    "content": "Track and analyze search behavior on your website using SiteSearch analytics features. This guide covers setting up analytics, interpreting data, and improving search based on user behavior.",
+    "url": "/analytics.html",
+    "type": "tutorial",
+    "date": "2025-03-25"
+  },
+  {
+    "id": "7",
+    "title": "Multilingual Search Support",
+    "content": "Configure SiteSearch to support multiple languages on your website. This guide covers language detection, character encoding, and localization strategies.",
+    "url": "/multilingual.html",
+    "type": "documentation",
+    "date": "2025-03-30"
+  },
+  {
+    "id": "8",
+    "title": "Troubleshooting Common Issues",
+    "content": "Solutions for common problems encountered when using SiteSearch. This guide provides step-by-step troubleshooting procedures and workarounds for known issues.",
+    "url": "/troubleshooting.html",
+    "type": "support",
+    "date": "2025-04-01"
+  },
+  {
+    "id": "9",
+    "title": "SiteSearch API Reference",
+    "content": "Complete reference documentation for the SiteSearch JavaScript API. This guide covers all methods, properties, and events available for developers.",
+    "url": "/api-reference.html",
+    "type": "documentation",
+    "date": "2025-04-05"
+  },
+  {
+    "id": "10",
+    "title": "Migrating from v0.9 to v1.0",
+    "content": "Step-by-step guide for migrating from SiteSearch v0.9 to v1.0. This guide covers breaking changes, new features, and migration strategies.",
+    "url": "/migration-guide.html",
+    "type": "documentation",
+    "date": "2025-04-10"
+  }
+]
