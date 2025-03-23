@@ -90,6 +90,8 @@ Add the following code to the `<head>` section of your HTML:
 | resourceId | string | null | Resource ID for API (if needed) |
 | testData | array | [...] | Custom test data (when dataSource is 'test') |
 
+**Important**: For apiKey, use only read-only API keys and never give access to sensitive or confidential data.
+
 ### Search Settings
 
 | Option | Type | Default | Description |

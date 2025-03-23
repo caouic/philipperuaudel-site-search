@@ -45,6 +45,8 @@
         dataSource: 'test', // Possible values: 'test', 'json', 'api'
         dataEndpoint: null,
         apiKey: null,
+
+        // For apiKey, use only read-only API keys and never give access to sensitive or confidential data.
         
         // Test data (used if dataSource = 'test')
         testData: [
